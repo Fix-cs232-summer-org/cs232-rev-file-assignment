@@ -17,7 +17,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: binary-file
-        setup-command: gcc rev_file.c -o rev
+        setup-command: gcc rev.c -o rev
         command: bash tests/binary_file.sh && echo $?
         expected-output: 0
         comparison-method: contains
@@ -28,7 +28,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: correct
-        setup-command: gcc rev_file.c -o rev
+        setup-command: gcc rev.c -o rev
         command: bash tests/correct.sh && echo $?
         expected-output: 0
         comparison-method: contains
@@ -39,7 +39,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: empty-file
-        setup-command: gcc rev_file.c -o rev
+        setup-command: gcc rev.c -o rev
         command: bash tests/empty_file.sh && echo $?
         expected-output: 0
         comparison-method: contains
@@ -50,7 +50,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: no-src
-        setup-command: gcc rev_file.c -o rev
+        setup-command: gcc rev.c -o rev
         command: bash tests/no_src.sh && echo $?
         expected-output: 0
         comparison-method: contains
@@ -61,7 +61,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: rev-into-dir
-        setup-command: gcc rev_file.c -o rev
+        setup-command: gcc rev.c -o rev
         command: bash tests/rev_into_dir.sh && echo $?
         expected-output: 0
         comparison-method: contains
@@ -72,7 +72,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: src-is-dir
-        setup-command: gcc rev_file.c -o rev
+        setup-command: gcc rev.c -o rev
         command: bash tests/src_is_dir.sh && echo $?
         expected-output: 0
         comparison-method: contains
@@ -83,7 +83,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: src-not-readable
-        setup-command: gcc rev_file.c -o rev
+        setup-command: gcc rev.c -o rev
         command: bash tests/src_not_readable.sh && echo $?
         expected-output: 0
         comparison-method: contains
@@ -94,7 +94,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: test-2args
-        setup-command: gcc rev_file.c -o rev
+        setup-command: gcc rev.c -o rev
         command: bash tests/test_2args.sh && echo $?
         expected-output: 0
         comparison-method: contains
